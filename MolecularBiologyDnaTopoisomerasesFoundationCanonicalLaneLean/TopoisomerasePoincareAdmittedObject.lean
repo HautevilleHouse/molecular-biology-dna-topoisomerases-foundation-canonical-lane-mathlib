@@ -1,0 +1,27 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.MolecularBiologyDnaTopoisomerasesFoundationCanonicalLaneLean.TopoisomeraseStructures
+import HautevilleHouse.MolecularBiologyDnaTopoisomerasesFoundationCanonicalLaneLean.TopoisomeraseCleavageComplex
+import HautevilleHouse.MolecularBiologyDnaTopoisomerasesFoundationCanonicalLaneLean.AtpDependentGatePassage
+import HautevilleHouse.MolecularBiologyDnaTopoisomerasesFoundationCanonicalLaneLean.TopoisomeraseInhibitorBinding
+import HautevilleHouse.MolecularBiologyDnaTopoisomerasesFoundationCanonicalLaneLean.SupercoilingRelaxationKinetics
+
+namespace HautevilleHouse
+namespace MolecularBiologyDnaTopoisomerasesFoundationCanonicalLaneLean
+
+structure TopoisomeraseAdmittedObject where
+  dna : DnaTopology
+  cleavage : CleavageComplex
+  atpGate : AtpGatePassage
+  inhibitor : InhibitorBinding
+  kinetics : RelaxationKinetics
+  topologyResolved : supercoilingClosed dna
+  cleavageCompetent : cleavageCompetent cleavage
+  atpGateClosed : atpDependentReligationClosed atpGate
+  inhibitorClosed : inhibitorBlockadeClosed inhibitor
+  relaxationComplete : relaxationClosed kinetics
+
+def TopoisomeraseAdmitted (obj : TopoisomeraseAdmittedObject) : Prop :=
+  obj.topologyResolved ∧ obj.cleavageCompetent ∧ obj.atpGateClosed ∧ obj.inhibitorClosed ∧ obj.relaxationComplete
+
+end MolecularBiologyDnaTopoisomerasesFoundationCanonicalLaneLean
+end HautevilleHouse
